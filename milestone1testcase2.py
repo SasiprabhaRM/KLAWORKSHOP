@@ -1,3 +1,4 @@
+
 import math
 import numpy as np
 
@@ -14,15 +15,15 @@ def generate_wafer_points(wafer_diameter, num_points, angle_deg):
     return points
 
 # Read input values from file
-with open("Testcase1.txt", "r") as file:
+with open("Testcase2.txt", "r") as file:
     lines = file.readlines()
     wafer_diameter = float(lines[0].split(":")[1].strip())
     num_points = int(lines[1].split(":")[1].strip())
     angle_deg = float(lines[2].split(":")[1].strip())
 
 # Write points to file
-with open("python.txt", "w") as file:
+with open("python2.txt", "w") as file:
     for point in generate_wafer_points(wafer_diameter, num_points, angle_deg):
         file.write(f"{point[0]},{point[1]}\n")
 
-print("Points written to python.txt")
+print("Points written to python2.txt")
